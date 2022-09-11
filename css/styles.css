@@ -16,6 +16,8 @@ body{
 }
 
 .logo {
+    display: inline-block;
+    width: 145px;
     text-decoration: none;
     font-family: 'Raleway', variable;
     font-size: 26px;
@@ -54,7 +56,6 @@ body{
     margin-left: auto;
     margin-right: auto;
     width: 696px;
-    height: 120px;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 44px;
@@ -64,10 +65,9 @@ body{
 }
 
 .hidden-section-title{
+    display: none;
     visibility: hidden;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
+
 }
 
 .work-title,
@@ -75,7 +75,6 @@ body{
     margin-top: 0;
     margin-bottom: 50px;
     width: 366px;
-    height: 42px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -107,18 +106,15 @@ body{
     margin-top: 0;
     margin-bottom: 10px;
     width: 270px;
-    min-height: 16px;
     font-size: 14px;
     line-height: 1.14;
     color: var(--primery-title-color);
 }
 
 .benefits-section .text{
-    display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
     width: 270px;
-    height: 72px;
 }
 
 .staff-title-name{
@@ -136,6 +132,7 @@ body{
 }
 
 .studio-button {
+    display: inline-block;
     min-width: 216px;
     height: 50px;
     padding: 10px 32px;
@@ -144,6 +141,7 @@ body{
     border-radius: 4px;
     background-color: var(--accent-color);
     color: var(--primary-white-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.06em;
@@ -157,7 +155,11 @@ body{
 }
 
 .potfolio-button {
+    display: inline-block;
     cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    height: 38px;
     background-color: #F5F4FA;
     color: var(--primery-title-color);
     font-weight: 500;
@@ -166,24 +168,63 @@ body{
     font-family: inherit;
 }
 
+.btn-usi{
+    padding: 6px 25px;
+    min-width: 73px;
+}
+
+.btn-web-sites,
+.btn-dodatki,
+.btn-dizain,
+.btn-marketing {
+    padding: 6px 22px;
+}
+
+.btn-web-sites{
+    min-width: 125px;
+}
+
+.btn-dodatki{
+    min-width: 112px;
+}
+
+.btn-dizain {
+    min-width: 103px;
+}
+
+.btn-marketing {
+    min-width: 130px;
+}
+
 .potfolio-button:hover,
 .potfolio-button:focus {
     background-color: var(--accent-color);
     color: var(--primary-white-color);
 }
 
+
+
 .project-title{
+    margin: 20px 24px 4px;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--primery-title-color);
 }
 
+.project-examples .text{
+    margin: 4px 24px 20px;
+}
+
 .footer-logo{
+    display: inline-block;
+    margin-bottom: 20px;
     color: var(--primary-white-color);
 }
 
 .footer-link{
+    display: inline-block;
+    margin-bottom: 9px;
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -201,10 +242,10 @@ body{
 .business-card .text{
     display: inline-block;
     width: 130px;
-    min-height: 19px;
     margin: 0;
     font-size: 16px;
     line-height: 1.19;
+
 }
 
 .section-project .text{
@@ -213,6 +254,7 @@ body{
 }
 
 .address-text{
+    margin-bottom: 9px;
     font-style: normal;
     line-height: 1.71;
     color: var(--primary-white-color);
@@ -228,23 +270,24 @@ body{
     text-decoration: none;
 }
 
-.portfolio-title{
-    visibility: hidden;
-}
-
 .container{
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
 
-    border: 2px solid blue;
-        background-color: aqua;
+
 }
 
 .hero-container,
-.benefits-section-container{
-    margin-bottom: 94px;
+.benefits-section-container,
+.section-staff-container  {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.header-container {
+    height: 80px;
 }
 
 .hero-container{
@@ -254,10 +297,30 @@ body{
 }
 
 .work-section-container{
-    margin-bottom: 60px;
+    padding-bottom: 94px;
 }
 
-.section-staff-container{
-    padding-top: 34px;
+.footer-container{
+    padding-top: 94px;
+    height: 252px;
+}
 
+.project-container{
+    padding-top: 34px;
+    padding-bottom: 94px;
+}
+
+.portfolio-button-container{
+    padding-top: 94px;
+}
+
+.project-examples{
+    width: 370px;
+    background: var(--primary-white-color);
+    border: 1px solid #EEEEEE;
+}
+
+.picture,
+.photo{
+    display: block;
 }
