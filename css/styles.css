@@ -27,11 +27,11 @@ body{
 
 .logo {
     display: inline-block;
-    width: 145px;
+
     text-decoration: none;
-    margin-top: 24px;
-    margin-bottom: 25px;
-    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    padding-right: 93px;
 
     font-family: 'Raleway', variable;
     font-size: 26px;
@@ -59,8 +59,16 @@ body{
     color: var(--accent-color);
 }
 
-.hero,
-.footer {
+.footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.hero{
+    padding-top: 0;
+}
+
+.footer,
+.hero {
     background: var(--footer-hero-background-color);
 }
 
@@ -114,7 +122,7 @@ body{
 
 .nav-link {
     display: block;
-    padding-top: 40px;
+    padding-top: 32px;
     padding-bottom: 32px;
 
     font-weight: 500;
@@ -133,7 +141,7 @@ body{
 }
 
 .site-nav .item +.item{
-    padding-left: 50px;
+    margin-left: 50px;
 }
 
 .contacts-nav {
@@ -173,7 +181,6 @@ body{
 .staff-title-name{
     margin-top: 0;
     margin-bottom: 10px;
-    padding-top: 30px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -223,7 +230,7 @@ body{
     cursor: pointer;
     text-align: center;
     border-radius: 4px;
-    min-width: 73px;
+    border: none;
     height: 38px;
     padding: 6px 22px;
     background-color: #F5F4FA;
@@ -245,8 +252,8 @@ body{
 }
 
 .project-title{
-    padding: 20px 24px 4px;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 4px;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -254,27 +261,30 @@ body{
 }
 
 .project-examples {
+    padding: 20px 24px;
     width: 370px;
     background: var(--primary-white-color);
     border: 1px solid #EEEEEE;
 }
 
-.project-examples .text{
+.project-examples .text {
     margin: 0;
-    padding: 4px 24px 20px;
-
 }
 
 .footer-logo{
     display: inline-block;
-    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     margin-bottom: 20px;
     color: var(--primary-white-color);
 }
 
 .footer-link{
-    margin-bottom: 9px;
     color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-links .item:not(:last-child){
+    margin-bottom: 9px;
 }
 
 .benefits-section .text {
@@ -282,6 +292,8 @@ body{
 }
 
 .business-card {
+    padding-top: 30px;
+    padding-bottom: 30px;
     width: 270px;
     height: 108px;
     text-align: center;
@@ -337,8 +349,8 @@ body{
 }
 
 .footer-container{
+    padding-top: 0;
     padding-bottom: 0;
-    height: 252px;
 }
 
 .project-container{
