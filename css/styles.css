@@ -15,10 +15,24 @@ body{
     letter-spacing: 0.03em;
 }
 
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+}
+
 .logo {
     display: inline-block;
     width: 145px;
     text-decoration: none;
+    margin-top: 24px;
+    margin-bottom: 25px;
+    margin-right: 93px;
+
     font-family: 'Raleway', variable;
     font-size: 26px;
     line-height: 1.19;
@@ -65,9 +79,18 @@ body{
 }
 
 .hidden-section-title{
-    display: none;
     visibility: hidden;
 
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
 }
 
 .work-title,
@@ -75,9 +98,10 @@ body{
     margin-top: 0;
     margin-bottom: 50px;
     width: 366px;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
+
+    text-align: center;
     font-size: 36px;
     line-height: 1.17;
     color: var(--primery-title-color);
@@ -88,6 +112,10 @@ body{
 }
 
 .nav-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     font-weight: 500;
     line-height: 1.14px;
     letter-spacing: 0.02em;
@@ -97,6 +125,33 @@ body{
 .site-nav .link.current,
 .section-project .current {
     color: var(--accent-color);
+}
+
+.site-nav{
+    display: flex;
+}
+
+.site-nav .item +.item{
+    padding-left: 50px;
+}
+
+.contacts-nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.page-nav {
+    display: flex;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-nav .item:not(:last-child){
+    padding-right: 50px;
 }
 
 .benefits-section{
@@ -154,12 +209,28 @@ body{
     background-color: var(--accent-color);
 }
 
+.button-list {
+    display: flex;
+    justify-content: center;
+}
+
+.button-list .item:not(:last-child){
+    margin-right: 8px;
+}
+
+/* .button-list .potfolio-button:not(:last-child){
+    margin-left: 12px;
+} */
+    
+
 .potfolio-button {
     display: inline-block;
     cursor: pointer;
     text-align: center;
     border-radius: 4px;
+    min-width: 73px;
     height: 38px;
+    padding: 6px 22px;
     background-color: #F5F4FA;
     color: var(--primery-title-color);
     font-weight: 500;
@@ -168,32 +239,8 @@ body{
     font-family: inherit;
 }
 
-.btn-usi{
+.section-project .current {
     padding: 6px 25px;
-    min-width: 73px;
-}
-
-.btn-web-sites,
-.btn-dodatki,
-.btn-dizain,
-.btn-marketing {
-    padding: 6px 22px;
-}
-
-.btn-web-sites{
-    min-width: 125px;
-}
-
-.btn-dodatki{
-    min-width: 112px;
-}
-
-.btn-dizain {
-    min-width: 103px;
-}
-
-.btn-marketing {
-    min-width: 130px;
 }
 
 .potfolio-button:hover,
@@ -202,28 +249,35 @@ body{
     color: var(--primary-white-color);
 }
 
-
-
 .project-title{
-    margin: 20px 24px 4px;
+    padding: 20px 24px 4px;
+    margin: 0;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--primery-title-color);
 }
 
+.project-examples {
+    width: 370px;
+    background: var(--primary-white-color);
+    border: 1px solid #EEEEEE;
+}
+
 .project-examples .text{
-    margin: 4px 24px 20px;
+    margin: 0;
+    padding: 4px 24px 20px;
+
 }
 
 .footer-logo{
     display: inline-block;
+    margin-top: 0;
     margin-bottom: 20px;
     color: var(--primary-white-color);
 }
 
 .footer-link{
-    display: inline-block;
     margin-bottom: 9px;
     color: rgba(255, 255, 255, 0.6);
 }
@@ -260,22 +314,11 @@ body{
     color: var(--primary-white-color);
 }
 
-.list{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.link {
-    text-decoration: none;
-}
-
 .container{
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-
 
 }
 
@@ -314,13 +357,43 @@ body{
     padding-top: 94px;
 }
 
-.project-examples{
-    width: 370px;
-    background: var(--primary-white-color);
-    border: 1px solid #EEEEEE;
-}
-
 .picture,
 .photo{
     display: block;
+}
+
+.benefits{
+    display: flex;
+    flex-direction: row;
+}
+.benefits .item:not(:last-child){
+    margin-right: 30px;
+}
+
+.work-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.staff-cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projects .item{
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.projects .item:nth-child(3n){
+    margin-right: 0;
+}
+
+.projects .item:nth-last-child(-n+3){
+    margin-bottom: 0;
 }
