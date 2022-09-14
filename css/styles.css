@@ -27,10 +27,7 @@ body{
 
 .logo {
     display: inline-block;
-
     text-decoration: none;
-    padding-top: 24px;
-    padding-bottom: 25px;
     padding-right: 93px;
 
     font-family: 'Raleway', variable;
@@ -151,6 +148,11 @@ body{
 
 .page-nav {
     display: flex;
+}
+
+.page-nav .logo {
+    display: flex;
+    align-items: center;
 }
 
 .main-nav {
